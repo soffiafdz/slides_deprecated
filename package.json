@@ -42,6 +42,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bower": "^1.8.8"
+    "bower": "^1.8.8",
+    "reveal.js-d3js": "^1.0.0"
   }
 }
