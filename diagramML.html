@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<head>
+    <link rel="stylesheet" href="plugin/diagram/revealjs-diagram.css">
+</head>
+<body>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="plugin/diagram/revealjs-diagram.js"></script>
+    <script>
+
+        var treeData = {
+            name: 'Machine Learning',
+            x0: window.diagram.height / 2,
+            y0: 0,
+            children: []
+        };
+
+        // Function to add general types
+        function addTypes() {
+            window.diagram.addItem('Supervised Learning', 'Machine Learning', treeData)();
+            window.diagram.addItem('Unsupervised Learning', 'Machine Learning', treeData)();
+        };
+
+        // Function to remove general types
+        function rmTypes() {
+            window.diagram.removeItem('Supervised Learning', treeData)();
+            window.diagram.removeItem('Unsupervised Learning', treeData)();
+        };
+
+        // Function to add descriptions
+        function addDesc() {
+            window.diagram.addItem('Data labeled by humans', 'Supervised Learning', treeData)();
+            window.diagram.addItem('Unlabeled data; find structure', 'Unsupervised Learning', treeData)();
+        };
+
+        // Function to remove descriptions
+        function rmDesc() {
+            window.diagram.removeItem('Data labeled by humans', treeData)();
+            window.diagram.removeItem('Unlabeled data; find structure', treeData)();
+        };
+
+        // Function to add sub types
+        function addSubtypes() {
+            window.diagram.addItem('Classification', 'Supervised Learning', treeData)();
+            window.diagram.addItem('Regression', 'Supervised Learning', treeData)();
+        };
+
+        // Function to remove sub types
+        function rmSubtypes() {
+            window.diagram.removeItem('Classification', treeData)();
+            window.diagram.removeItem('Regression', treeData)();
+        };
+
+        function addSubdesc() {
+            window.diagram.addItem('Output: categorical', 'Classification', treeData)();
+            window.diagram.addItem('Output: numerical', 'Regression', treeData)();
+        };
+
+        function rmSubdesc() {
+            window.diagram.removeItem('Output: categorical', treeData)();
+            window.diagram.removeItem('Output: numerical', treeData)();
+        };
+
+        function all() {
+            window.diagram.addItem('Support Vector Classifier', 'Classification', treeData)();
+            window.diagram.addItem('Log Regression', 'Classification', treeData)();
+            window.diagram.addItem('Naive Bayes', 'Classification', treeData)();
+            window.diagram.addItem('K Nearest Neighbor', 'Classification', treeData)();
+            window.diagram.addItem('Neural Networks', 'Classification', treeData)();
+            window.diagram.addItem('ElasticNet', 'Regression', treeData)();
+            window.diagram.addItem('Random Forest', 'Regression', treeData)();
+            window.diagram.addItem('Support Vector Regressor', 'Regression', treeData)();
+            window.diagram.addItem('K-means', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Hierarchical', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Gaussian Mixture', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Hidden Markov Model', 'Unsupervised Learning', treeData)();
+            window.diagram.addLink('Neural Networks', 'Regression', treeData)();
+            window.diagram.addLink('Neural Networks', 'Unsupervised Learning', treeData)();
+
+        };
+
+        function rmAll() {
+            window.diagram.removeItem('Support Vector Classifier', treeData)();
+            window.diagram.removeItem('Log Regression', treeData)();
+            window.diagram.removeItem('Naive Bayes', treeData)();
+            window.diagram.removeItem('K Nearest Neighbor', treeData)();
+            window.diagram.removeItem('Neural Networks', treeData)();
+            window.diagram.removeItem('ElasticNet', treeData)();
+            window.diagram.removeItem('Random Forest', treeData)();
+            window.diagram.removeItem('Support Vector Regressor', treeData)();
+            window.diagram.removeItem('K-means', treeData)();
+            window.diagram.removeItem('Hierarchical', treeData)();
+            window.diagram.removeItem('Gaussian Mixture', treeData)();
+            window.diagram.removeItem('Hidden Markov Model', treeData)();
+            window.diagram.removeLink('Neural Networks', 'Regression', treeData)();
+            window.diagram.removeLink('Neural Networks', 'Unsupervised Learning', treeData)();
+
+        };
+
+        function rmAll2() {
+            window.diagram.removeItem('Log Regression', treeData)();
+            window.diagram.removeItem('Naive Bayes', treeData)();
+            window.diagram.removeItem('K Nearest Neighbor', treeData)();
+            window.diagram.removeItem('Neural Networks', treeData)();
+            window.diagram.removeItem('ElasticNet', treeData)();
+            window.diagram.removeItem('Random Forest', treeData)();
+            window.diagram.removeItem('Support Vector Regressor', treeData)();
+            window.diagram.removeItem('K-means', treeData)();
+            window.diagram.removeItem('Hierarchical', treeData)();
+            window.diagram.removeItem('Gaussian Mixture', treeData)();
+            window.diagram.removeItem('Hidden Markov Model', treeData)();
+            window.diagram.removeLink('Neural Networks', 'Regression', treeData)();
+            window.diagram.removeLink('Neural Networks', 'Unsupervised Learning', treeData)();
+
+        };
+        function rmCl() {
+            window.diagram.removeItem('Support Vector Classifier', treeData)();
+            window.diagram.removeItem('Log Regression', treeData)();
+            window.diagram.removeItem('Naive Bayes', treeData)();
+            window.diagram.removeItem('K Nearest Neighbor', treeData)();
+            window.diagram.removeItem('Neural Networks', treeData)();
+        };
+
+        function rmRg() {
+            window.diagram.removeItem('ElasticNet', treeData)();
+            window.diagram.removeItem('Random Forest', treeData)();
+            window.diagram.removeItem('Support Vector Regressor', treeData)();
+            window.diagram.removeItem('Neural Networks', treeData)();
+        };
+
+        function rmUs() {
+            window.diagram.removeItem('Neural Networks', treeData)();
+            window.diagram.removeItem('K-means', treeData)();
+            window.diagram.removeItem('Hierarchical', treeData)();
+            window.diagram.removeItem('Gaussian Mixture', treeData)();
+            window.diagram.removeItem('Hidden Markov Model', treeData)();
+        };
+
+        function addCl() {
+            window.diagram.addItem('Support Vector Classifier', 'Classification', treeData)();
+            window.diagram.addItem('Log Regression', 'Classification', treeData)();
+            window.diagram.addItem('Naive Bayes', 'Classification', treeData)();
+            window.diagram.addItem('K Nearest Neighbor', 'Classification', treeData)();
+            window.diagram.addItem('Neural Networks', 'Classification', treeData)();
+        };
+
+        function addRg() {
+            window.diagram.addItem('ElasticNet', 'Regression', treeData)();
+            window.diagram.addItem('Random Forest', 'Regression', treeData)();
+            window.diagram.addItem('Support Vector Regressor', 'Regression', treeData)();
+            window.diagram.addItem('Neural Networks', 'Regression', treeData)();
+        };
+
+        function addUs() {
+            window.diagram.addItem('Neural Networks', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('K-means', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Hierarchical', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Gaussian Mixture', 'Unsupervised Learning', treeData)();
+            window.diagram.addItem('Hidden Markov Model', 'Unsupervised Learning', treeData)();
+        };
+
+        var _transitions = [
+            addTypes,
+            addDesc,
+            rmDesc,
+            addSubtypes,
+            addSubdesc,
+            rmSubdesc,
+            all,
+            rmAll2
+
+
+        ];
+
+        var _inverse_transitions = [
+            rmTypes,
+            rmDesc,
+            addDesc,
+            rmSubtypes,
+            rmSubdesc,
+            addSubdesc,
+            rmAll,
+            all,
+            window.diagram.removeItem('Support Vector Classifier', treeData)
+        ];
+
+        // register the diagram
+        window.diagram.register('ML', function() {
+            window.diagram.init(treeData);
+        });
+    </script>
+</body>

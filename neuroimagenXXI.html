@@ -77,7 +77,7 @@
                 </section>
                 <section>
                     <section>
-                    <h2>Connectomics</h2>
+                        <h2>Connectomics</h2>
                     </section>
                     <section>
                         <p>Resting-state fMRI is a promising and powerful neuroimaging technique that can noninvasively measure intrinsic or spontaneous activity in the human brain</p>
@@ -138,49 +138,21 @@
                             &ldquo;Machine learning research is part of research on artificial intelligence, seeking to provide knowledge to computers through data, observations and interacting with the world. That acquired knowledge allows computers to correctly generalize to new settings.&rdquo; -Yoshua Bengio, PhD; Universit&eacute; de Montr&eacute;al
                         </blockquote>
                     </section>
-                    <section>
-                        <h3>Methods</h3>
-                        <div class='left fragment fade-in-then-semi-out'>
-                            <h4>Supervised</h4>
-                            <p>Trains algorithms<br>based on example<br>input/output data<br>labeled by humans</p>
-                        </div>
-                        <div class='right fragment fade-in-then-semi-out'>
-                            <h4>Unsupervised</h4>
-                            <p>No labeled data is provided; find structure within its input data</p>
-                        </div>
-                    </section>
-                    <section>
-                        <h3>All sorts of algorithms...</h4>
-                        <div class='left'>
-                            <ul>
-                                <li>Stochastic Gradient Descent</li>
-                                <li class="fragment">Lasso/Ridge Regression</li>
-                                <li class="fragment">ElasticNet</li>
-                                <li class="fragment">SVM</li>
-                            </ul>
-                        </div>
-                        <div class='right'>
-                            <ul>
-                                <li class="fragment">Kmeans</li>
-                                <li class="fragment">Naive Bayes</li>
-                                <li class="fragment">KNeighbors</li>
-                                <li class="fragment">...</li>
-                            </ul>
-                        </div>
+                    <section class="fig-container" data-fig-id='fig-ML' data-file='diagramML.html'>
                     </section>
                 </section>
                 <section>
                     <section>
-                    <h2>Support Vector Machines</h2>
+                        <h2>Support Vector Classifier</h2>
                     </section>
                     <section>
-                        <p>A support vector machine (SVM) is a discriminative classifier formally defined by a separating hyperplane.</p>
+                        <p>A <font color="red">support vector classifier (SVC)</font> is a discriminative classifier formally defined by a <font color='red'>separating hyperplane.</font></p>
                     </section>
                     <section>
-                        <p>Given a labeled training data (supervised learning), the algorithm outputs an optimal hyperplane in a high- or infinite-dimensional space which categorizes new examples.</p>
+                        <p>Given a labeled training data (<font color='red'>supervised learning</font>), the algorithm outputs an <font color='red'>optimal hyperplane</font> in a high- or infinite-dimensional space which categorizes new examples.</p>
                     </section>
                     <section>
-                        <p>The best hyperplane is the one that represents the largest separation, or margin, between the two classes.</p>
+                        <p>The best hyperplane is the one that represents the largest separation, or <font color='red'>margin</font>, between the two classes.</p>
                     </section>
                     <section>
                         <h3>Best hyperplane<h3>
@@ -189,14 +161,15 @@
                     <section>
                         <h3>Log vs Hinge loss</h3>
                         <img src="img1/hingeVlog.png" alt="hinge"></section>
-                    </section>
+                </section>
                 </section>
                 <section>
                     <section>
                         <h2>Research goal</h2>
                     </section>
                     <section>
-                        <p>Employ a Support Vector Machine algorithm to correctly classify cocaine-dependent subjects from healthy controls utilizing global topology metrics of functional brain connectivity as features</p>
+                        <p>Explore the usability of global brain connectivity measures as cocaine-dependence descriptors.</p>
+                        <p class='fragment'>See how well a <font color='red'>Support Vector Classifier</font> can correctly classify cocaine-dependent patients from healthy controls using a set of <font color='red'>global topology</font> metrics as features.</p>
                     </section>
                 </section>
                 <section>
@@ -204,38 +177,91 @@
                         <h2>Data</h2>
                     </section>
                     <section>
-                        <p>For this project we used three independent datasets from three separate studies done in our lab.</p>
+                        <p>Three independent datasets from separate studies done in our lab.</p>
                     </section>
                     <section>
                         <h3>Training dataset</h3>
-                        <p>To train the model we used the data of a transversal cocaine-dependence study of cocaine-dependent participants vs healthy controls ($n=107$)</p>
+                        <p>To train the model we used the data of a cross-sectional cocaine-dependence study of cocaine-dependent participants (CU) and healthy controls (HC) ($n=107$)</p>
+                    </section>
+                    <section>
+                        <table>
+                            <tr>
+                                <th rowspan='2'></th>
+                                <th colspan='2'>CU ($n=62$)</th>
+                                <th colspan='2'>HC ($n=45$)</th>
+                            </tr>
+                            <tr>
+                                <td>Mean/n</td>
+                                <td>SD/%</td>
+                                <td>Mean/n</td>
+                                <td>SD/%</td>
+                            </tr>
+                            <tr>
+                                <td>Age (years)</td>
+                                <td>31.2</td>
+                                <td>7.2</td>
+                                <td>30.5</td>
+                                <td>7.5</td>
+                            </tr>
+                            <tr>
+                                <td>Males</td>
+                                <td>55</td>
+                                <td>88.7%</td>
+                                <td>37</td>
+                                <td>82.2%</td>
+                            </tr>
+                        </table>
                     </section>
                     <section>
                         <h3>Testing dataset</h3>
-                        <p>In order to test our model, we made a combined dataset from the data of other two studies:</p>
-                        <br>
-                        <div class='left fragment'><strong>clinical data</strong><br>rTMS clinical trial<br>$n=34$</div>
-                        <div class='right fragment'><strong>control data</strong><br>social neuroscience study<br>$n=30$</div>
+                        <p>Combination of two different datasets from separate studies.</p>
+                        <table>
+                            <tr>
+                                <th rowspan='2'></th>
+                                <th colspan='2'>CU ($n=34$)</th>
+                                <th colspan='2'>HC ($n=30$)</th>
+                            </tr>
+                            <tr>
+                                <td>Mean/n</td>
+                                <td>SD/%</td>
+                                <td>Mean/n</td>
+                                <td>SD/%</td>
+                            </tr>
+                            <tr>
+                                <td>Age (years)</td>
+                                <td>34.6</td>
+                                <td>8.2</td>
+                                <td>24.6</td>
+                                <td>4.3</td>
+                            </tr>
+                            <tr>
+                                <td>Males</td>
+                                <td>30</td>
+                                <td>88.2%</td>
+                                <td>15</td>
+                                <td>50%</td>
+                            </tr>
+                        </table>
                     </section>
                     <section>
-                        <br><br>
+                        <h3>Proportion of datasets</h3>
                         <canvas class="stretch" data-chart="pie">
-,CD patients, Healthy controls
-Testing dataset,34,30
-Training dataset,62,45
-                        <!--
-                        {
-                        "data" : {
-                        "datasets" : [{ "backgroundColor": [ "#a23" , "#000" ]}, { "backgroundColor": [ "#a23" , "#000" ]} ]
-                            }
-                        }
-                        -->
+                            ,CD patients, Healthy controls
+                            Testing dataset,34,30
+                            Training dataset,62,45
+                            <!--
+                                {
+                                "data" : {
+                                "datasets" : [{ "backgroundColor": [ "#a23" , "#000" ]}, { "backgroundColor": [ "#a23" , "#000" ]} ]
+                                }
+                                }
+                            -->
                         </canvas>
                     </section>
                 </section>
                 <section>
                     <section>
-                    <h2>Neuroimaging data</h2>
+                        <h2>Neuroimaging data</h2>
                     </section>
                     <section>
                         <h3>Sequences</h3>
@@ -251,14 +277,46 @@ Training dataset,62,45
                             <strong>GRE-EPI</strong>(10 min)<br>
                             TR/TE: 2000/30ms;<br>
                             36 slices;<br>
-                            voxel: 3x3x3.3mm;<br>
+                            voxel: 3x3x3.3mm (Testing);<br>
+                            voxel: 3mm<sup>3</sup> (Training);<br>
                             FOV: 240mm
                         </div>
                     </section>
+                </section>
+                <section>
                     <section>
-                        <h3>Imaging Pre-processing</h3>
-                        <p>FMRIPrep &amp; xcpEngine</p>
-                        <p>36 parameters with scrubbing</p>
+                        <h2>Imaging Pre-processing</h2>
+                    </section>
+                    <section>
+                        <h3>FMRIprep</h3>
+                        <p>Open-source fMRI minimal preprocessing pipeline <span class='small'>(Esteban et al., 2018)</p>
+                    </section>
+                    <section>
+                        <h3>XCP imaging pipeline</h3>
+                        <p>Open-source software package for modular processing of multimodal neuroimages</p>
+                    </section>
+                    <section>
+                        <h3>Pipeline: Power, 2014</h3>
+                        <div class='left'>
+                            <ul>
+                                <li>Distortion correction</li>
+                                <li>Motion realignment</li>
+                                <li>Brain extraction</li>
+                                <li>Demeaning &amp; Detrending</li>
+                                <li>Corregistration</li>
+                                <li>6 realignment parameters</li>
+                            </ul>
+                        </div>
+                        <div class='right'>
+                            <ul>
+                                <li>Mean WM/CSF signal</li>
+                                <li>Mean global signal</li>
+                                <li>Derivatives &amp; Quadratics (6RP)</li>
+                                <li>Expansion (WM/CSF/GS)</li>
+                                <li>Bandpass (0.01-0.08 Hz)</li>
+                                <li>Hard scrubbing</li>
+                            </ul>
+                        </div>
                     </section>
                 </section>
                 <section>
@@ -268,169 +326,305 @@ Training dataset,62,45
                     <section>
                         <h3>brainGraph</h3>
                         <p>R package</p>
+                        <p class='small'>(Watson, 2018)</p>
                     </section>
                     <section>
-                        <p>Power264 atlas</p>
-                        <p class='fragment'>Weighted and undirected graphs</p>
-                        <p class='fragment'>Consensus-based thresholding <br>$\tau=.3$;  $T=50\%$</p>
+                        <h3>Power 264 Atlas</h3>
+                        <figure>
+                            <img src="img1/power.png" alt="power2011">
+                            <figcaption class='small right'>from Power et al., 2011</figcaption>
+                        </figure>
+                    </section>
+                    <section>
+                        <p>Weighted and undirected graphs were constructed from the correlation (Pearson's $r$) of the BOLD signal</p>
+                        <p class='fragment'>Self- and negative correlations were discarded from the adjacency matrices</p>
+                    </section>
+                    <section>
+                        <h3>Consensus-based thresholding</h3>
+                        \[w_{ij}=
+                        \begin{cases}
+                        w_{ij}, &amp; \text{if}\ w_{ij} \geq \tau \enspace \text{en}\ (\frac{T}{100})m \\
+                        0, &amp; \text{otherwise}
+                        \end{cases}
+                        \]
+                        <p>$\tau=.3$;   $T=50\%$</p>
                     </section>
                 </section>
                 <section>
                     <section>
-                    <h2>Graph Metrics</h2>
+                        <h2>Graph Metrics</h2>
+                    </section>
+                    <section>
+                        <p>Eleven global topology metrics were calculated for all of the graphs of both the training and testing datasets</p>
+                        <p>These were chosen because of their interpretability and the frequency of their use in other clinical studies <span class='small'> (Rubinov &amp; Sporns, 2010)</span></p>
                     </section>
                     <section>
                         <h3>Assortativity</h3>
-                        <div>
                         <p>Correlation between the degrees of connected nodes</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/assortativity.png" alt="assort">
-                        </div>
+                        $r=\frac{l^{-1} \sum_{(i,j) \in L} k_i k_j - [l^{-1} \sum_{(i,j) \in L} \frac{1}{2}(k_i + k_j)]^2}{l^{-1} \sum_{(i,j) \in L} \frac{1}{2}(k^2_i + k^2_j) - [l^{-1} \sum_{(i,j) \in L} \frac{1}{2}(k_i + k_j)]^2}$
                     </section>
                     <section>
                         <h3>Characteristic Path Length</h3>
-                        <div>
                         <p>Mean minimum number of edges that must be traversed to go from one node to another</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/Lp.png" alt="lp">
-                        </div>
+                        $L = \frac{1}{n}\sum_{i \in N} L_i = \frac{1}{n} \sum_{i \in N} \frac{\sum_{j \in N, j \neq i} d_{ij}}{n-1}$
                     </section>
                     <section>
                         <h3>Clustering coefficient</h3>
-                        <div>
-                            <p>Number of connections that exist between the nearest neighbours of a node as a proportion of the maximum number of possible connections</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/Cp.png" alt="cp">
-                        </div>
+                        <p>Number of connections that exist between the nearest neighbours of a node as a proportion of the maximum number of possible connections</p>
+                        $C = \frac{1}{n}\sum_{i \in N} C_i = \frac{1}{n} \sum_{i \in N} \frac{2t_i}{k_i(k_i-1)}$
                     </section>
                     <section>
                         <h3>Density</h3>
-                        <div>
-                            <p>Proportion of present connections from all the posible number of connections</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/density.png" alt="dens">
-                        </div>
+                        <p>Proportion of present connections from all the posible number of connections</p>
+                        $D=\frac{\Sigma_{i \in N}k_i^w}{n}$
                     </section>
                     <section>
-                        <h3>Diameter</h3>
-                        <div>
-                            <p>Length of the longest path from one node to another</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/diameter.png" alt="diam">
-                        </div>
+                        <h3>Diameter </h3>
+                        <p>Length of the longest path of the shortest paths between any two nodes</p>
+                        $d = \text{max}(L_i)$
                     </section>
                     <section>
-                        <h3>Global Efficiency</h3>
-                        <div>
-                            <p>Measure of exchange of information across the whole network</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/E.global.png" alt="EG">
-                        </div>
+                        <h3>Global Efficiency (&amp; weighted variant)</h3>
+                        <p>Measure of exchange of information across the whole network</p>
+                        $E = \frac{1}{n}\sum_{i \in N} E_i = \frac{1}{n}\sum_{i \in N} \frac{\sum_{j \in N, j \neq i} d^{-1}_{ij}}{n-1}$
                     </section>
                     <section>
-                        <h3>Local Efficiency</h3>
-                        <div>
-                            <p>Network's resistance to failure on a small scale</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/E.local.png" alt="LE">
-                        </div>
+                        <h3>Local Efficiency (&amp; weighted variant)</h3>
+                        <p>Network's resistance to failure on a small scale</p>
+                        $E_{\text{loc}} = \frac{1}{n}\sum_{i \in N} E_{\text{loc},i} = \frac{i}{n}\sum_{i \in N} \frac{\sum_{j,h \in N, j \neq i} a_{ij} a_{ih} [d_{jh}(N_i)]^{-1}}{k_i(k_i -1)}$
                     </section>
                     <section>
-                        <h3>Modularity</h3>
-                        <div>
-                            <p>How much do the network can be subdivided into smaller modules</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/mod.png" alt="mod">
-                        </div>
+                        <h3>Modularity (&amp; weighted variant)</h3>
+                        <p>How much do the network can be subdivided into smaller modules</p>
+                        $Q = \sum_{u \in M} [e_{uu} - (\sum_{v \in M} e_{uv})^2]$
                     </section>
                     <section>
                         <h3>Transitivity</h3>
-                        <div>
-                            <p>Normalized variant of the clustering coefficient</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/transitivity.png" alt="trans">
-                        </div>
+                        <p>Normalized variant of the clustering coefficient</p>
+                        $T = \frac{\sum_{i \in N}2t_i}{\sum{i \in N} k_i (k_i -1)}$
                     </section>
                     <section>
                         <h3>Strength</h3>
-                        <div>
-                            <p>Sum of all neighboring link weights</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/strength.png" alt="str">
-                        </div>
+                        <p>Sum of all neighboring link weights</p>
+                        $k_i^w = \Sigma_{j \in N}w_{ij}$
                     </section>
                     <section>
                         <h3>Vulnerability</h3>
-                        <div>
-                            <p>Assessment of damage to the network after removing of a node</p>
-                        </div>
-                        <div>
-                            <img src="outData/plots/vulnerability.png" alt="vuln">
-                        </div>
+                        <p>Assessment of damage to the network after removing of a node</p>
+                        <p>Maximum proportional drop in global efficiency when a given node is removed from the graph</p>
                     </section>
                 </section>
                 <section>
                     <section>
-                    <h2>Support Vector Classifier</h2>
+                        <h2>Support Vector Classifier</h2>
                     </section>
                     <section>
                         <h3>Data preprocessing</h3>
-                        <p><strong>Feature scaling:</strong><br>Median removal and scaling according to the IQR</p>
-                        <pre><code>
-from sklearn import preprocessing
-
-X_train = X_train.apply(lambda x : preprocessing.robust_scale(x))
-X_test = X_test.apply(lambda x : preprocessing.robust_scale(x))
-                        </code></pre>
+                        <p><strong>Feature scaling:</strong><br>Median removal and scaling according to the Interquartile range</p>
                     </section>
                     <section>
-                        <h3>Scikit-learn: LinearSVC</h3>
-                        <pre><code>
-import numpy as np
-from sklearn import model_selection, svm
-
-classifier = svm.LinearSVC(random_state = 666, max_iter = 150000)
-parameters = {
-    'C' : np.linspace(1, 15, 141)
-    'loss' : ['hinge', 'squared_hinge']
-}
-
-cv = model_selection.GridSearchCV(
-    classifier, parameters, cv = 40, iid = False
-)
-cv.fit(X_train, y_train)
-                        </code></pre>
+                        <h3>Cross-validation</h3>
+                        <p>In order to find the best parameters for the model, we ran a <strong>cross-validation</strong> procedure of 15 k-folds on the training data</p>
+                        <p><font color='red'>C: </font> 1 : 15 : 0.1</p>
+                        <p><font color='red'>Loss function: </font> Hinge vs Squared hinge</p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Results</h2>
                     </section>
                     <section>
-                        <h3>Cross validation results</h3>
+                        <h3>Graph metrics</h3>
+                        <h4>Training and testing distributions</h4>
+                    </section>
+                    <section>
+                        <h4>Assortativity</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/assortativity.png" alt="assort">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/assortativity1.png" alt="assort">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Characteristic Path Length</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/Lp.png" alt="lp">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/Lp1.png" alt="lp">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Clustering Coefficient</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/Cp.png" alt="cp">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/Cp1.png" alt="cp">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Density</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/density.png" alt="dens">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/density1.png" alt="dens">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Diameter</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/diameter.png" alt="diam">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/diameter1.png" alt="diam">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Global Efficiency</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/E.global.png" alt="EG">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/E.global1.png" alt="EG">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Local Efficiency</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/E.local.png" alt="EG">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/E.local1.png" alt="EG">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Modularity</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/mod.png" alt="mod">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/mod1.png" alt="mod">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Transitivity</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/transitivity.png" alt="trans">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/transitivity1.png" alt="trans">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Strength</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/strength.png" alt="str">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/strength1.png" alt="str">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Vulnerability</h4>
+                        <div class='left'>
+                            <figure>
+                                <img src="outData/plots/vulnerability.png" alt="vuln">
+                                <figcaption class='small'>Training</figcaption>
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="outData/plots/vulnerability1.png" alt="vuln">
+                                <figcaption class='small'>Testing</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Classifier</h3>
+                    </section>
+                    <section>
+                        <h4>Cross validation results</h4>
                         <canvas class="stretch" data-chart='line' data-chart-src='outData/CSV/pData1.csv'>
-                        <!--
-                        {
-                        "data" : {
-                        "datasets" : [{ "borderColor": "#a23"}, { "borderColor": "#000" } ]
-                            }
-                        }
-                        -->
+                            <!--
+                                {
+                                "data" : {
+                                "datasets" : [{ "borderColor": "#a23"}, { "borderColor": "#000" } ]
+                                }
+                                }
+                            -->
                         </canvas>
                     </section>
                     <section>
-                        <h3>Best parameters</h3>
-                        <p><strong>C:</strong> 1.4</p>
-                        <p><strong>Loss:</strong> Hinge</p>
-                        <p><strong>CV accuracy:</strong><br>0.96</p>
+                        <h4>Best parameters</h4>
+                        <p><font color='red'>C:</font> 1.4</p>
+                        <p><font color='red'>Loss:</font> Hinge</p>
+                        <p><font color='red'>CV accuracy:</font><br>0.96</p>
                     </section>
                     <section>
-                        <h3>Testing of model</h3>
+                        <h4>Testing of the model</h4>
                         <table>
                             <tr>
                                 <th></th>
@@ -477,8 +671,43 @@ cv.fit(X_train, y_train)
                         </table>
                     </section>
                     <section>
-                        <h3>Confusion matrix</h3>
-                        <img src="outData/plots/heatmap1.png" alt="htmap">
+                        <figure>
+                            <img src="outData/plots/heatmap1.png" alt="htmap">
+                            <figcaption>Confusion matrix</figcaption>
+                        </figure>
+                    </section>
+                    <section>
+                        <h4>Best features</h4>
+                        <table>
+                            <tr>
+                                <th colspan='2'>Positive</th>
+                                <th colspan='2'>Negative</th>
+                            </tr>
+                            <tr>
+                                <th>Coef.</th>
+                                <th>Feature</th>
+                                <th>Coef.</th>
+                                <th>Feature</th>
+                            </tr>
+                            <tr>
+                                <td>1.38</td>
+                                <td>Char. Path L.</td>
+                                <td>-1.76</td>
+                                <td>Transitivity</td>
+                            </tr>
+                            <tr>
+                                <td>0.8</td>
+                                <td>Clustering C.</td>
+                                <td>-1.41</td>
+                                <td>L. efficiency</td>
+                            </tr>
+                            <tr>
+                                <td>0.71</td>
+                                <td>Vulnerability</td>
+                                <td>-0.86</td>
+                                <td>Strength</td>
+                            </tr>
+                        </table>
                     </section>
                 </section>
                 <section>
@@ -497,6 +726,35 @@ cv.fit(X_train, y_train)
                 </section>
                 <section>
                     <h2>Questions</h2>
+                </section>
+                <section>
+                    <section>
+                        <h2>References</h2>
+                    </section>
+                    <section>
+                        <p class='tiny'>Alavash, M., Doebler, P., Holling, H., Thiel, C. M., &amp; Gießing, C. (2015). Is functional integration of resting state brain networks an unspecific biomarker for working memory performance? NeuroImage, 108, 182–193. https://doi.org/10.1016/J.NEUROIMAGE.2014.12.046</p>
+                        <p class='tiny'>Biswal, B. B., Mennes, M., Zuo, X.-N., Gohel, S., Kelly, C., Smith, S. M., … Milham, M. P. (2010). Toward discovery science of human brain function. Proceedings of the National Academy of Sciences, 107(10), 4734–4739. https://doi.org/10.1073/pnas.0911855107</p>
+                        <p class='tiny'>Ciric, R., Wolf, D. H., Power, J. D., Roalf, D. R., Baum, G. L., Ruparel, K., … Satterthwaite, T. D. (2017). Benchmarking of participant-level confound regression strategies for the control of motion artifact in studies of functional connectivity. NeuroImage, 154, 174–187. https://doi.org/10.1016/j.neuroimage.2017.03.020</p>
+                        <p class='tiny'>Cohen, J. R., &amp; D’Esposito, M. (2016). The Segregation and Integration of Distinct Brain Networks and Their Relationship to Cognition. Journal of Neuroscience, 36(48), 12083–12094. https://doi.org/10.1523/JNEUROSCI.2965-15.2016</p>
+                        <p class='tiny'>Esteban, O., Markiewicz, C. J., Blair, R. W., Moodie, C. A., Isik, A. I., Erramuzpe, A., … Gorgolewski, K. J. (2019). fMRIPrep: a robust preprocessing pipeline for functional MRI. Nature Methods, 16(1), 111–116. https://doi.org/10.1038/s41592-018-0235-4</p>
+                        <p class='tiny'>Fornito, A., &amp; Bullmore, E. T. (2015). Connectomics: A new paradigm for understanding brain disease. European Neuropsychopharmacology, 25(5), 733–748. https://doi.org/10.1016/J.EURONEURO.2014.02.011</p>
+                    </section>
+                    <section>
+                        <p class='tiny'>Fornito, A., Bullmore, E. T., &amp; Zalesky, A. (2017). Opportunities and Challenges for Psychiatry in the Connectomic Era. Biological Psychiatry: Cognitive Neuroscience and Neuroimaging, 2(1), 9–19. https://doi.org/10.1016/J.BPSC.2016.08.003</p>
+                        <p class='tiny'>Liang, X., Wang, J., Yan, C., Shu, N., Xu, K., Gong, G., &amp; He, Y. (2012). Effects of different correlation metrics and preprocessing factors on small-world brain functional networks: a resting-state functional MRI study. PloS One, 7(3), e32766. https://doi.org/10.1371/journal.pone.0032766</p>
+                        <p class='tiny'>Liu, J., Xia, M., Dai, Z., Wang, X., Liao, X., Bi, Y., &amp; He, Y. (2016). Intrinsic Brain Hub Connectivity Underlies Individual Differences in Spatial Working Memory. Cerebral Cortex, 27(12), 5496–5508. https://doi.org/10.1093/cercor/bhw317</p>
+                        <p class='tiny'>Power, J. D., Cohen, A. L., Nelson, S. S. M., Wig, G. S., Barnes, K. A., Church, J. A., … Petersen, S. E. (2011). Functional network organization of the human brain. Neuron, 72(4), 665–678. https://doi.org/10.1016/j.neuron.2011.09.006.Functional</p>
+                        <p class='tiny'>Power, J. D., Mitra, A., Laumann, T. O., Snyder, A. Z., Schlaggar, B. L., &amp; Petersen, S. E. (2014). Methods to detect, characterize, and remove motion artifact in resting state fMRI. NeuroImage, 84, 320–341. https://doi.org/10.1016/J.NEUROIMAGE.2013.08.048</p>
+                        <p class='tiny'>Rubinov, M., &amp; Sporns, O. (2010). Complex network measures of brain connectivity: Uses and interpretations. NeuroImage, 52(3), 1059–1069. https://doi.org/10.1016/j.neuroimage.2009.10.003</p>
+                    </section>
+                    <section>
+                        <p class='tiny'>Smith, S. M., Vidaurre, D., Beckmann, C. F., Glasser, M. F., Jenkinson, M., Miller, K. L., … Essen, D. C. Van. (2013). Functional connectomics from resting-state fMRI. Trends in Cognitive Sciences, 17(12), 666. https://doi.org/10.1016/J.TICS.2013.09.016</p>
+                        <p class='tiny'>Steele, V. R., Ding, X., &amp; Ross, T. J. (2018). Addiction: Informing drug abuse interventions with brain networks. In Connectomics. https://doi.org/10.1016/b978-0-12-813838-0.00006-6</p>
+                        <p class='tiny'>Tomasi, D., Wang, G.-J., &amp; Volkow, N. D. (2013). Energetic cost of brain functional connectivity. Proceedings of the National Academy of Sciences of the United States of America, 110(33), 13642–13647. https://doi.org/10.1073/pnas.1303346110</p>
+                        <p class='tiny'>Villatoro, J. A., Icaza, M. E. M. M., Ito, D. A. F., Resendiz, E., Gutiérrez, J. P., Franco, A., &amp; Romero, M. (2017). Encuesta Nacional de Consumo de Drogas, Alcohol y Tabaco 2016-2017: Consumo de Drogas: Prevalencias globales, tendencias y variaciones estatales. ResearchGate, (June). https://doi.org/10.13140/RG.2.2.19450.08649</p>
+                        <p class='tiny'>Volkow, N. D., Koob, G. F., &amp; McLellan, A. T. (2016). Neurobiologic Advances from the Brain Disease Model of Addiction. New England Journal of Medicine, 374(4), 363–371. https://doi.org/10.1056/NEJMra1511480</p>
+                        <p class='tiny'>Watson, C. G. (2018). brainGraph: Graph Theory Analysis of Brain MRI Data. Retrieved from https://github.com/cwatson/brainGraph</p>
+                    </section>
                 </section>
             </div>
         </div>
@@ -544,7 +802,9 @@ cv.fit(X_train, y_train)
                     { src: 'plugin/notes/notes.js', async: true },
                     { src: 'plugin/reveal.js-plugins/chart/Chart.min.js'},
                     { src: 'plugin/reveal.js-plugins/chart/csv2chart.js'},
-                    { src: 'plugin/math/math.js', async: true }
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'https://d3js.org/d3.v4.min.js'},
+                    { src: 'plugin/d3js.js'}
                 ]
             });
         </script>
