@@ -100,7 +100,8 @@
   margin-top: 35%;
 }
 .reveal .authors {
-  font-size: 70%;
+  font-size: 60%;
+  color: #2a76dd
 }
 .reveal .left {
   float: left;
