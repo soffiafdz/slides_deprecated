@@ -106,17 +106,29 @@
             window.diagram.removeItem('Intervencion completa: 23', treeData)();
             window.diagram.removeItem('No completaron intervencion: 3', treeData)();
             window.diagram.removeItem('No completaron intervencion: 5', treeData)();
-            window.diagram.addItem('Analizados: 18', 'EMTr sham: 23', treeData)();
-            window.diagram.addItem('Analizados: 22', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Excluidos: 1', 'EMTr real: 26', treeData)();
+            window.diagram.removeItem('EMTr sham: 23', treeData)();
+            window.diagram.removeItem('EMTr real: 26', treeData)();
+            window.diagram.removeItem('Aleatorizados: 49', treeData)();
+            window.diagram.removeItem('Pacientes', treeData)();
+            window.diagram.addItem('EMTr sham', 'Muestra', treeData)();
+            window.diagram.addItem('EMTr real', 'Muestra', treeData)();
+            window.diagram.addItem('Analizados: 18', 'EMTr sham', treeData)();
+            window.diagram.addItem('Analizados: 22', 'EMTr real', treeData)();
+            window.diagram.addItem('Excluidos: 1', 'EMTr real', treeData)();
             window.diagram.addItem('Hallazgos neurologicos', 'Excluidos: 1', treeData)();
         };
 
         function rm5() {
+            window.diagram.addItem('Pacientes', 'Muestra', treeData)();
+            window.diagram.addItem('Aleatorizados: 49', 'Pacientes', treeData)();
+            window.diagram.addItem('EMTr real: 26', 'Aleatorizados: 49', treeData)();
+            window.diagram.addItem('EMTr sham: 23', 'Aleatorizados: 49', treeData)();
             window.diagram.addItem('No completaron intervencion: 5', 'EMTr sham: 23', treeData)();
             window.diagram.addItem('No completaron intervencion: 3', 'EMTr real: 26', treeData)();
             window.diagram.addItem('Intervencion completa: 23', 'EMTr real: 26', treeData)();
             window.diagram.addItem('Intervencion completa: 18', 'EMTr sham: 23', treeData)();
+            window.diagram.removeItem('EMTr sham', treeData)();
+            window.diagram.removeItem('EMTr real', treeData)();
             window.diagram.removeItem('Analizados: 18', treeData)();
             window.diagram.removeItem('Analizados: 22', treeData)();
             window.diagram.removeItem('Hallazgos neurologicos', treeData)();
@@ -126,30 +138,36 @@
         function add6() {
             window.diagram.removeItem('Hallazgos neurologicos', treeData)();
             window.diagram.removeItem('Excluidos: 1', treeData)();
-            window.diagram.addItem('Descontinuaron: 4', 'Analizados: 18', treeData)();
-            window.diagram.addItem('Completaron EMTr real: 14',  'Analizados: 18', treeData)();
+            window.diagram.removeItem('Analizados: 18', treeData)();
+            window.diagram.removeItem('Analizados: 22', treeData)();
+            window.diagram.addItem('Descontinuaron: 4', 'EMTr sham', treeData)();
+            window.diagram.addItem('Completaron EMTr real: 14',  'EMTr sham', treeData)();
         }
 
         function rm6() {
             window.diagram.addItem('Excluidos: 1', 'EMTr real: 26', treeData)();
             window.diagram.addItem('Hallazgos neurologicos', 'Excluidos', treeData)();
+            window.diagram.addItem('Analizados: 18', 'EMTr sham', treeData)();
+            window.diagram.addItem('Analizados: 22', 'EMTr real', treeData)();
             window.diagram.removeItem('Descontinuaron: 4', treeData)();
             window.diagram.removeItem('Completaron EMTr real: 14', treeData)();
         }
 
         function add7() {
             window.diagram.removeItem('Descontinuaron: 4', treeData)();
-            window.diagram.addItem('Descontinuaron intervencion: 20', 'Completaron EMTr real: 14', treeData)();
-            window.diagram.addItem('Completaron EMTr (3 meses): 16',  'Completaron EMTr real: 14', treeData)();
-            window.diagram.addLink('Descontinuaron intervencion: 20', 'Analizados: 22', treeData)();
-            window.diagram.addLink('Completaron EMTr (3 meses): 16',  'Analizados: 22', treeData)();
+            window.diagram.removeItem('Completaron EMTr real: 14', treeData)();
+            window.diagram.addItem('Descontinuaron intervencion: 20', 'EMTr sham', treeData)();
+            window.diagram.addItem('Completaron EMTr (3 meses): 16',  'EMTr sham', treeData)();
+            window.diagram.addLink('Descontinuaron intervencion: 20', 'EMTr real', treeData)();
+            window.diagram.addLink('Completaron EMTr (3 meses): 16',  'EMTr real', treeData)();
             window.diagram.addItem('Analizados 3 meses: 16', 'Completaron EMTr (3 meses): 16', treeData)();
         };
 
         function rm7() {
-            window.diagram.addItem('Descontinuaron: 4', 'Analizados: 18', treeData)();
-            window.diagram.removeLink('Descontinuaron intervencion: 20', 'Analizados: 22', treeData)();
-            window.diagram.removeLink('Completaron EMTr (3 meses): 16',  'Analizados: 22', treeData)();
+            window.diagram.addItem('Descontinuaron: 4', 'EMTr sham', treeData)();
+            window.diagram.addItem('Completaron EMTr real: 14', 'EMTr sham', treeData)();
+            window.diagram.removeLink('Descontinuaron intervencion: 20', 'EMTr real', treeData)();
+            window.diagram.removeLink('Completaron EMTr (3 meses): 16',  'EMTr real', treeData)();
             window.diagram.removeItem('Completaron EMTr (3 meses): 16', treeData)();
             window.diagram.removeItem('Descontinuaron intervencion: 20', treeData)();
             window.diagram.removeItem('Analizados 3 meses: 16', treeData)();
