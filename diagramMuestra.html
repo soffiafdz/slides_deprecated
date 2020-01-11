@@ -108,8 +108,8 @@
             window.diagram.removeItem('No completaron intervencion: 5', treeData)();
             window.diagram.addItem('Analizados: 18', 'EMTr sham: 23', treeData)();
             window.diagram.addItem('Analizados: 22', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Excluidos', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Hallazgos neurologicos: 1', 'Excluidos', treeData)();
+            window.diagram.addItem('Excluidos: 1', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos', 'Excluidos: 1', treeData)();
         };
 
         function rm5() {
@@ -119,20 +119,20 @@
             window.diagram.addItem('Intervencion completa: 18', 'EMTr sham: 23', treeData)();
             window.diagram.removeItem('Analizados: 18', treeData)();
             window.diagram.removeItem('Analizados: 22', treeData)();
-            window.diagram.removeItem('Hallazgos neurologicos: 1', treeData)();
-            window.diagram.removeItem('Excluidos', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos', treeData)();
+            window.diagram.removeItem('Excluidos: 1', treeData)();
         };
 
         function add6() {
-            window.diagram.removeItem('Hallazgos neurologicos: 1', treeData)();
-            window.diagram.removeItem('Excluidos', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos', treeData)();
+            window.diagram.removeItem('Excluidos: 1', treeData)();
             window.diagram.addItem('Descontinuaron: 4', 'Analizados: 18', treeData)();
             window.diagram.addItem('Completaron EMTr real: 14',  'Analizados: 18', treeData)();
         }
 
         function rm6() {
-            window.diagram.addItem('Excluidos', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Hallazgos neurologicos: 1', 'Excluidos', treeData)();
+            window.diagram.addItem('Excluidos: 1', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos', 'Excluidos', treeData)();
             window.diagram.removeItem('Descontinuaron: 4', treeData)();
             window.diagram.removeItem('Completaron EMTr real: 14', treeData)();
         }
