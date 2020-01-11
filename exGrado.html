@@ -339,12 +339,12 @@
                         </div>
                         <div class='right'>
                             <ul style='font-size:65%; margin-top:-30px'>
-                                <li>Magpro R-30 MagVenture; bobina MCF-P-B70 (Forma 8)</li>
+                                <li>Magpro R-30 MagVenture;<br>bobina MCF-P-B70 (Forma 8)</li>
                                 <li>DLPFC: 5cm anterior; 2cm lateral a M1</li>
-                                <li>Dos sesiones EMTr a 5 Hz; intervalo 30 min</li>
-                                <li>50 trenes de 10s; intervalo inter-tren 1 min; 100% MT</li>
-                                <li>5000 pulsos: 2500 pulsos, 58 min por sesion</li>
-                                <li>Sham doble-ciego; electrodo musculo frontal</li>
+                                <li>Dos sesiones EMTr a 5 Hz;<br>intervalo 30 min</li>
+                                <li>50 trenes de 10s;<br>intervalo inter-tren 1 min; 100% MT</li>
+                                <li>5000 pulsos:<br>2500 pulsos, 58 min/sesi&oacute;n</li>
+                                <li>Sham doble-ciego;<br>electrodo m&uacute;sculo frontal</li>
                             </ul>
                         </div>
                     </section>
@@ -352,8 +352,8 @@
                         <h2>Imagenes por Resonancia Magn&eacute;tica</h2>
                         <p>Resonador Philips Ingenia 3T y antena de cr&aacute;neo de 32 canales</p>
                         <div class='left'>
-                            <p style='font-size:70%; margin-top:-15px'>Secuencia EPI T2*</p>
-                            <ul style='font-size:55%; margin-top:-20px'>
+                            <p style='font-size:70%; margin-top:-25px'>Secuencia EPI T2*</p>
+                            <ul style='font-size:55%; margin-top:-30px'>
                                 <li>TR = 2s</li>
                                 <li>TE = 30ms</li>
                                 <li>Ángulo de inclinaci&oacute;n: 75°</li>
@@ -378,8 +378,10 @@
                     </section>
                     <section>
                         <h3>Manejo de datos</h3>
-                        <p>Los datos de MRI fueron organizados en BIDS y evaluados en su calidad con la herramienta MRIQC buscando artefactos de se&ntilde;al o movimiento</p>
-                        <p class='fragment'>Los datos fueron preprocesados con las herramientas abiertas FMRIPREP y XCP siguiendo un procedimiento abierto que incluye:</p>
+                        <p>Los datos de MRI fueron organizados en <font color='blue'>BIDS</font> y evaluados en su calidad con la herramienta <font color='blue'>MRIQC</font> buscando artefactos de se&ntilde;al o movimiento</p>
+                    </section>
+                    <section>
+                        <p class='fragment'>Los datos fueron preprocesados con las herramientas abiertas <font color='blue'>FMRIPREP</font> y <font color='blue'>XCP</font> siguiendo un procedimiento abierto que incluye:</p>
                         <ul style='font-size:50%; margin-top:-30px'>
                             <li>Extracci&oacute;n de cr&aacute;neo</li>
                             <li>Normalizaci&oacute;n a plantilla</li>
@@ -401,9 +403,11 @@
                         </div>
                         <div class='left'>
                             <p>Redes ponderadas no dirigidas fueron construidas a partir de la correlaci&oacute;n de la se&ntilde;al BOLD de cada uno de los 264 nodos del atlas de Power</p>
-                            <p class='fragment'>Auto-correlaciones y conexiones negativas fueron retiradas de las matrices y grafos</p>
-                            <p class='fragment'>Para retirar conexiones espurias, se realiz&oacute; un umbralizaje de consenso, donde solo permanecieron las conexiones que estuvieran en al menos el 50% de los integrantes de un grupo <span class='authors'>(de Reus &amp; van den Heuvel, 2013)</span></p>
                         </div>
+                        <section>
+                            <p>Auto-correlaciones y conexiones negativas fueron retiradas de las matrices y grafos</p>
+                            <p class='fragment'>Para retirar conexiones espurias, se realiz&oacute; un umbralizaje de consenso, donde solo permanecieron las conexiones que estuvieran en al menos el 50% de los integrantes de un grupo <span class='authors'>(de Reus &amp; van den Heuvel, 2013)</span></p>
+                        </section>
                     </section>
                     <section>
                         <h4>Medidas topol&oacute;gicas</h4>
