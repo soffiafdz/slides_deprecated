@@ -28,89 +28,103 @@
         };
 
         function add2() {
-            window.diagram.removeItem('Controles', treeData)();
             window.diagram.addItem('Excluidos: 71', 'Pacientes', treeData)();
-            window.diagram.addItem('Criterios de inclusi&oacute;n: 23', 'Excluidos: 71', treeData)();
+            window.diagram.addItem('Criterios de inclusion: 23', 'Excluidos: 71', treeData)();
             window.diagram.addItem('Decidir no participar: 48', 'Excluidos: 71', treeData)();
-            window.diagram.addItem('Aleatorizados: 49', 'Pacientes', treeData)();
         };
 
         function rm2() {
-            window.diagram.addItem('Controles', 'Muestra', treeData)();
             window.diagram.removeItem('Decidir no participar: 48', treeData)();
-            window.diagram.removeItem('Criterios de inclusi&oacute;n: 23', treeData)();
+            window.diagram.removeItem('Criterios de inclusion: 23', treeData)();
             window.diagram.removeItem('Excluidos: 71', treeData)();
-            window.diagram.removeItem('Aleatorizados: 49', treeData)();
         };
 
         function add3() {
-            window.diagram.addItem('Controles', 'Muestra', treeData)();
+            window.diagram.removeItem('Decidir no participar: 48', treeData)();
+            window.diagram.removeItem('Criterios de inclusion: 23', treeData)();
+            window.diagram.removeItem('Excluidos: 71', treeData)();
             window.diagram.addItem('Muestra independiente: 107', 'Controles', treeData)();
-            window.diagram.addItem('An&aacute;lisis: 45', 'Muestra independiente: 107', treeData)();
-            window.diagram.removeItem('Aleatorizados: 49', treeData)();
-            window.diagram.addItem('Excluidos', 'Pacientes', treeData)();
-            window.diagram.addItem('Claustrofobia: 1', 'Excluidos', treeData)();
-            window.diagram.addItem('Hallazgos neurol&oacute;gicos: 1', 'Excluidos', treeData)();
-            window.diagram.addItem('Falta de consumo: 1', 'Excluidos', treeData)();
-            window.diagram.addItem('An&aacute;lisis: 46', 'Pacientes', treeData)();
+            window.diagram.addItem('Analisis: 45', 'Muestra independiente: 107', treeData)();
+            window.diagram.addItem('Excluidos: 3', 'Pacientes', treeData)();
+            window.diagram.addItem('Claustrofobia', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Falta de consumo', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Analisis: 46', 'Pacientes', treeData)();
         };
 
         function rm3() {
-            window.diagram.removeItem('An&aacute;lisis: 46', treeData)();
-            window.diagram.removeItem('Falta de consumo: 1', treeData)();
-            window.diagram.removeItem('Hallazgos neurol&oacute;gicos: 1', treeData)();
-            window.diagram.removeItem('Claustrofobia: 1', treeData)();
-            window.diagram.removeItem('Excluidos', treeData)();
-            window.diagram.addItem('Aleatorizados: 49', 'Pacientes', treeData)();
-            window.diagram.removeItem('An&aacute;lisis: 45', treeData)();
+            window.diagram.addItem('Excluidos: 71', 'Pacientes', treeData)();
+            window.diagram.addItem('Criterios de inclusion: 23', 'Excluidos: 71', treeData)();
+            window.diagram.addItem('Decidir no participar: 48', 'Excluidos: 71', treeData)();
+            window.diagram.removeItem('Analisis: 46', treeData)();
+            window.diagram.removeItem('Falta de consumo', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos', treeData)();
+            window.diagram.removeItem('Claustrofobia', treeData)();
+            window.diagram.removeItem('Excluidos: 3', treeData)();
+            window.diagram.removeItem('Analisis: 45', treeData)();
             window.diagram.removeItem('Muestra independiente: 107', treeData)();
-            window.diagram.removeItem('Controles', treeData)();
         };
 
         function add4() {
+            window.diagram.removeItem('Analisis: 46', treeData)();
+            window.diagram.removeItem('Falta de consumo', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos', treeData)();
+            window.diagram.removeItem('Claustrofobia', treeData)();
+            window.diagram.removeItem('Excluidos: 3', treeData)();
+            window.diagram.removeItem('Analisis: 45', treeData)();
+            window.diagram.removeItem('Muestra independiente: 107', treeData)();
+            window.diagram.removeItem('Controles', treeData)();
             window.diagram.addItem('Aleatorizados: 49', 'Pacientes', treeData)();
             window.diagram.addItem('EMTr real: 26', 'Aleatorizados: 49', treeData)();
             window.diagram.addItem('EMTr sham: 23', 'Aleatorizados: 49', treeData)();
-            window.diagram.addItem('No completaron intervenci&oacute;n: 5', 'EMTr sham: 23', treeData)();
-            window.diagram.addItem('No completaron intervenci&oacute;n: 3', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Intervenci&oacute;n completa: 23', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Intervenci&oacute;n completa: 18', 'EMTr sham: 23', treeData)();
+            window.diagram.addItem('No completaron intervencion: 5', 'EMTr sham: 23', treeData)();
+            window.diagram.addItem('No completaron intervencion: 3', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Intervencion completa: 23', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Intervencion completa: 18', 'EMTr sham: 23', treeData)();
         };
 
         function rm4() {
-            window.diagram.removeItem('Intervenci&oacute;n completa: 18', treeData)();
-            window.diagram.removeItem('Intervenci&oacute;n completa: 23', treeData)();
-            window.diagram.removeItem('No completaron intervenci&oacute;n: 3', treeData)();
-            window.diagram.removeItem('No completaron intervenci&oacute;n: 5', treeData)();
+            window.diagram.addItem('Muestra independiente: 107', 'Controles', treeData)();
+            window.diagram.addItem('Analisis: 45', 'Muestra independiente: 107', treeData)();
+            window.diagram.addItem('Excluidos: 3', 'Pacientes', treeData)();
+            window.diagram.addItem('Claustrofobia', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Falta de consumo', 'Excluidos: 3', treeData)();
+            window.diagram.addItem('Analisis: 46', 'Pacientes', treeData)();
+            window.diagram.addItem('Controles', 'Muestra', treeData)();
+            window.diagram.removeItem('Intervencion completa: 18', treeData)();
+            window.diagram.removeItem('Intervencion completa: 23', treeData)();
+            window.diagram.removeItem('No completaron intervencion: 3', treeData)();
+            window.diagram.removeItem('No completaron intervencion: 5', treeData)();
             window.diagram.removeItem('EMTr sham: 23', treeData)();
             window.diagram.removeItem('EMTr real: 26', treeData)();
             window.diagram.removeItem('Aleatorizados: 49', treeData)();
         };
 
         function add5() {
-            window.diagram.removeItem('Intervenci&oacute;n completa: 18', treeData)();
-            window.diagram.removeItem('Intervenci&oacute;n completa: 23', treeData)();
-            window.diagram.removeItem('No completaron intervenci&oacute;n: 3', treeData)();
-            window.diagram.removeItem('No completaron intervenci&oacute;n: 5', treeData)();
+            window.diagram.removeItem('Intervencion completa: 18', treeData)();
+            window.diagram.removeItem('Intervencion completa: 23', treeData)();
+            window.diagram.removeItem('No completaron intervencion: 3', treeData)();
+            window.diagram.removeItem('No completaron intervencion: 5', treeData)();
             window.diagram.addItem('Analizados: 18', 'EMTr sham: 23', treeData)();
             window.diagram.addItem('Analizados: 22', 'EMTr real: 26', treeData)();
             window.diagram.addItem('Excluidos', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Hallazgos neurol&oacute;gicos: 1', 'Excluidos', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos: 1', 'Excluidos', treeData)();
         };
 
         function rm5() {
-            window.diagram.addItem('No completaron intervenci&oacute;n: 5', 'EMTr sham: 23', treeData)();
-            window.diagram.addItem('No completaron intervenci&oacute;n: 3', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Intervenci&oacute;n completa: 23', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Intervenci&oacute;n completa: 18', 'EMTr sham: 23', treeData)();
+            window.diagram.addItem('No completaron intervencion: 5', 'EMTr sham: 23', treeData)();
+            window.diagram.addItem('No completaron intervencion: 3', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Intervencion completa: 23', 'EMTr real: 26', treeData)();
+            window.diagram.addItem('Intervencion completa: 18', 'EMTr sham: 23', treeData)();
             window.diagram.removeItem('Analizados: 18', treeData)();
             window.diagram.removeItem('Analizados: 22', treeData)();
-            window.diagram.removeItem('Hallazgos neurol&oacute;gicos: 1', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos: 1', treeData)();
             window.diagram.removeItem('Excluidos', treeData)();
         };
 
         function add6() {
-            window.diagram.removeItem('Hallazgos neurol&oacute;gicos: 1', treeData)();
+            window.diagram.removeItem('Hallazgos neurologicos: 1', treeData)();
             window.diagram.removeItem('Excluidos', treeData)();
             window.diagram.addItem('Descontinuaron: 4', 'Analizados: 18', treeData)();
             window.diagram.addItem('Completaron EMTr real: 14',  'Analizados: 18', treeData)();
@@ -118,32 +132,32 @@
 
         function rm6() {
             window.diagram.addItem('Excluidos', 'EMTr real: 26', treeData)();
-            window.diagram.addItem('Hallazgos neurol&oacute;gicos: 1', 'Excluidos', treeData)();
+            window.diagram.addItem('Hallazgos neurologicos: 1', 'Excluidos', treeData)();
             window.diagram.removeItem('Descontinuaron: 4', treeData)();
             window.diagram.removeItem('Completaron EMTr real: 14', treeData)();
         }
 
         function add7() {
             window.diagram.removeItem('Descontinuaron: 4', treeData)();
-            window.diagram.addItem('Descontinuaron intervenci&oacute;n: 20', 'Completaron EMTr real: 14', treeData)();
+            window.diagram.addItem('Descontinuaron intervencion: 20', 'Completaron EMTr real: 14', treeData)();
             window.diagram.addItem('Completaron EMTr (3 meses): 16',  'Completaron EMTr real: 14', treeData)();
-            window.diagram.addLink('Descontinuaron intervenci&oacute;n: 20', 'Analizados: 22', treeData)();
+            window.diagram.addLink('Descontinuaron intervencion: 20', 'Analizados: 22', treeData)();
             window.diagram.addLink('Completaron EMTr (3 meses): 16',  'Analizados: 22', treeData)();
             window.diagram.addItem('Analizados 3 meses: 16', 'Completaron EMTr (3 meses): 16', treeData)();
         };
 
         function rm7() {
             window.diagram.addItem('Descontinuaron: 4', 'Analizados: 18', treeData)();
-            window.diagram.removeLink('Descontinuaron intervenci&oacute;n: 20', 'Analizados: 22', treeData)();
+            window.diagram.removeLink('Descontinuaron intervencion: 20', 'Analizados: 22', treeData)();
             window.diagram.removeLink('Completaron EMTr (3 meses): 16',  'Analizados: 22', treeData)();
             window.diagram.removeItem('Completaron EMTr (3 meses): 16', treeData)();
-            window.diagram.removeItem('Descontinuaron intervenci&oacute;n: 20', treeData)();
+            window.diagram.removeItem('Descontinuaron intervencion: 20', treeData)();
             window.diagram.removeItem('Analizados 3 meses: 16', treeData)();
         };
 
         function add8() {
             window.diagram.removeItem('Analizados 3 meses: 16', treeData)();
-            window.diagram.addItem('Descontinuaron intervenci&oacute;n: 5', 'Completaron EMTr (3 meses): 16', treeData)();
+            window.diagram.addItem('Descontinuaron intervencion: 5', 'Completaron EMTr (3 meses): 16', treeData)();
             window.diagram.addItem('Completaron EMTr (6 meses): 11',  'Completaron EMTr (3 meses): 16', treeData)();
             window.diagram.addItem('Analizados 6 meses: 11', 'Completaron EMTr (6 meses): 11', treeData)();
         };
@@ -151,7 +165,7 @@
         function rm8() {
             window.diagram.addItem('Analizados 3 meses: 16', 'Completaron EMTr (3 meses): 16', treeData)();
             window.diagram.removeItem('Analizados 6 meses: 11', treeData)();
-            window.diagram.removeItem('Descontinuaron intervenci&oacute;n: 5', treeData)();
+            window.diagram.removeItem('Descontinuaron intervencion: 5', treeData)();
             window.diagram.removeItem('Completaron EMTr (6 meses): 11', treeData)();
         };
 
