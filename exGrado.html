@@ -377,8 +377,47 @@
                         </div>
                     </section>
                     <section>
+                        <h3>Manejo de datos</h3>
+                        <p>Los datos de MRI fueron organizados en BIDS y evaluados en su calidad con la herramienta MRIQC buscando artefactos de se&ntilde;al o movimiento</p>
+                        <p class='fragment'>Los datos fueron preprocesados con las herramientas abiertas FMRIPREP y XCP siguiendo un procedimiento abierto que incluye:</p>
+                        <ul style='font-size:50%; margin-top:-30px'>
+                            <li>Extracci&oacute;n de cr&aacute;neo</li>
+                            <li>Normalizaci&oacute;n a plantilla</li>
+                            <li>Segmentaci&oacute;n de tejido</li>
+                            <li>Correcci&oacute;n de corte de tiempo</li>
+                            <li>Correcci&oacute;n de movimiento</li>
+                            <li>Corregistro de imagenes</li>
+                            <li>Regresi&oacute;n de ruido</li>
+                            <li>Censura por movimiento (0.5 mm)</li>
+                        </ul>
                     </section>
-                    <++>
+                    <section>
+                        <h3>Construcci&oacute;n de redes</h3>
+                        <div class='right'>
+                            <figure>
+                                <img src="exGrado/imgs/power.png" alt="power">
+                                <figcaption class='authors'>de Power et al., 2011
+                            </figure>
+                        </div>
+                        <div class='left'>
+                            <p>Redes ponderadas no dirigidas fueron construidas a partir de la correlaci&oacute;n de la se&ntilde;al BOLD de cada uno de los 264 nodos del atlas de Power</p>
+                            <p class='fragment'>Auto-correlaciones y conexiones negativas fueron retiradas de las matrices y grafos</p>
+                            <p class='fragment'>Para retirar conexiones espurias, se realiz&oacute; un umbralizaje de consenso, donde solo permanecieron las conexiones que estuvieran en al menos el 50% de los integrantes de un grupo <span class='authors'>(de Reus &amp; van den Heuvel, 2013)</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Medidas topol&oacute;gicas</h4>
+                        <p>Una vez construidos los grafos finales, se extrajeron las siguientes medidas de topolog&iacute;a para su comparaci&oacute;n</p>
+                        <ul style='font-size:60%; margin-top:-30px'>
+                            <li>Grado</li>
+                            <li>Densidad</li>
+                            <li>Coeficiente de agrupamiento</li>
+                            <li>Longitud de camino caracter&iacute;stica</li>
+                            <li>Eficiencia local</li>
+                            <li>Eficiencia global</li>
+                            <li>Escalar de mundo peque&ntilde;o </li>
+                        </ul>
+                    </section>
                 </section>
             </div>
         </div>
