@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>NIST Lab Meeting</title>
+
+        <meta name="description" content="Slides about rTMS paper/graphs">
+        <meta name="author" content="Sof&iacute;a Fern&aacute;ndez Lozano=">
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+        <meta name="viewport" content="width=devide-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css" id="theme">
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/monokai.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-background-image="nist/imgs/logoBG.png" >
+                    <section>
+                    <h2>TMS as a novel treatment in cocaine addiction<br><span style="font-size:50%">Sof&iacute;a Fern&aacute;ndez Lozano M.Sc.</span></h2>
+                    </section>
+                    <section>
+                        <div class='left'>
+                        <h3>Neuroimaging &amp; Psychiatry Laboratory</h3>
+                        </div>
+                        <div class='right'>
+                        <img src="nist/imgs/garzaLab.jpg" alt="lab">
+                        </div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Addiction</h3>
+                        <p>Neurobiological syndrome composed of <em>impulsive</em> and <em>compulsive</em> behaviors <span class='authors'>(Koob &amp; Volkow, 2010)</span><br> and characterized by:</p>
+                        <ol style='font-size:75%; margin-top:-30px'>
+                            <li>Compulsive search and consumption of the substance</li>
+                            <li>Lose of control to limit consumption</li>
+                            <li>Emergence of a negative emotional and motivational state</li>
+                        </ol>
+                    </section>
+                    <section data-background="nist/imgs/encodat.png" data-background-size="cover" data-background-position="top">
+                        <div class='fragment left' style="background-color: rgba(0, 0, 0, 0.7); color: #fff; padding: 10px;">
+                            <h3><font color='white'>Usage (M&eacute;xico)</font></h3>
+                            <p>Alcohol: 33.6%</p>
+                            <p>Tobacco: 17.6%</p>
+                            <p>Illicit drugs: 9.9%</p>
+                            <p>Marijuana: 8.6%</p>
+                            <p> <span class='fragment highlight-red'>Cocaine</span>: 3.5%</p>
+                        </div>
+                    </section>
+                    <section data-background="nist/imgs/cocFig.jpg" data-background-size="contain" data-background-position="right">
+                        <div class='fragment' style="background-color: rgba(0, 0, 0, 0.7); color: #fff; padding: 10px; position:relative; left:-200px; width: 450px; font-size:85%">
+                            <h4><b><font color='white'>Addiction model:</font></b></h4>
+                            <p align='left' class='fragment fade-in-then-semi-out'>Specific neurotransmitters:<br>Dopamine</p>
+                            <p align='left' class='fragment fade-in-then-semi-out'>Specific regions:<br>Frontal cortex; Striatum</p>
+                            <p align='left' class='fragment'>Better understanding of the condition:<br><span class="fragment highlight-red">Topological organization</span> and <span class="fragment highlight-red">connectivity networks</span> <span class="authors">(Steele, 2018)</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Treatment</h3>
+                        <div class='left'>
+                            <p>The optimal treatment is a multidisciplinary approach involving psychotherapy, counseling and pharmacology.</p>
+                        </div>
+                        <div class='right'>
+                            <p><strong>Not effective enough:</strong><br>Abstinence rates:<br><font color="red">40-60%</font> <span class="authors">(McLellan et al., 2000)</span></p>
+                            <p class='fragment'><b><u>It is necessary to search for new treatments</u></b></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Transcranial Magnetic Stimulation</h3>
+                        <div class='left'>
+                            <figure>
+                                <img src="nist/imgs/TMScircuit.png" alt="TMS">
+                                <figcaption class='authors right'>de Agarwal, 2016
+                            </figure>
+                        </div>
+                        <div class='right'>
+                            <p align='right'>Allows to modulate cortical excitability by the usage of focalized electromagnetic pulses that can pass painlessly through the scalp and skull <br><span class='authors'>(Noohi &amp; Amirsalari, 2016)</span></p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>rTMS in addiction</h4>
+                        <p>Recent research support the use of rTMS over the prefrontal cortex to reduce tobacco, alcohol and <font color="red">cocaine</font> <em>craving</em> <span class="authors">(Barr et al., 2011)</span></p>
+                        <ol style='font-size:75%; margin-top:-35px'>
+                            <li class='fragment'>The dorsolateral prefrontal cortex is an important part of the meso-fronto-limbic dopaminergic system <span class="authors">(Barr et al., 2011)</span></li>
+                            <li class='fragment'>rTMS may induce dopamine liberation in cortical and subcortical areas <span class='authors'>(Cho &amp; Strafella, 2009)</span></li>
+                            <li class='fragment'>The prefrontal cortex is inolved in decision-making processes, which might be altered in addicted patients <span class='authors'>(Barr et al., 2011)</span></li>
+                        </ol>
+                    </section>
+                    <section>
+                        <h4>rTMS in cocaine addiction</h4>
+                        <table style='position:relative; font-size:60%'>
+                            <tr>
+                                <th></th>
+                                <th>n</th>
+                                <th>Area</th>
+                                <th>Parameters</th>
+                                <th>Control</th>
+                                <th>Results</th>
+                            </tr>
+                            <tr>
+                                <td>Camprodon et al., 2007</td>
+                                <td>6</td>
+                                <td>Bilat. DLPFC </td>
+                                <td>2 sessions, 10 Hz</td>
+                                <td>NA</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Politi et al., 2008</td>
+                                <td>36</td>
+                                <td>Left DLPFC</td>
+                                <td>10 sessions, 15 Hz</td>
+                                <td>NA</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Hanlon et al., 2015</td>
+                                <td>11</td>
+                                <td>Left MPFC</td>
+                                <td>Theta-burst /fMRI</td>
+                                <td>Sham</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Terraneo et al., 2016</td>
+                                <td>32</td>
+                                <td>Left DLPFC</td>
+                                <td>8 sessions, 15 Hz</td>
+                                <td>Pharmacological Tx</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Rapinesi et al., 2016</td>
+                                <td>7</td>
+                                <td>Bilat. DLPFC </td>
+                                <td>H1, 12 sessions, 20 Hz</td>
+                                <td>NA</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Bolloni et al., 2016</td>
+                                <td>10</td>
+                                <td>Bilat. DLPFC </td>
+                                <td>H1, 12 sessions, 20 Hz</td>
+                                <td>Sham</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                            <tr>
+                                <td>Kearney-Ramos et al., 2018</td>
+                                <td>25</td>
+                                <td>Left MPFC</td>
+                                <td>Theta-burst /fMRI</td>
+                                <td>Sham</td>
+                                <td>Craving reduction</td>
+                            </tr>
+                        </table>
+                    </section>
+                    <section>
+                        <h3>Magnetic Resonance Imaging</h3>
+                        <div class='right'>
+                            <p align='right'>Magnetic Resonance Imaging (MRI) is widely used in addiction research because of its safety, absence of radioactivity and flexibility of the obtained information <span class='authors'>(Suckling &amp; Nestor, 2017)</span> </p>
+                        </div>
+                        <div class='left'>
+                            <br><img src="nist/imgs/mri.jpg" alt="mri">
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Functional MRI</h4>
+                        <p>Functional magnetic resonance imaging (fMRI) is a modality of MRI where brain activity can be indirectly measured by the endogenous contrast of the oxygen level in the blood (BOLD signal)<br><span class='authors'>(Ogawa et al., 1993)</span></p>
+                    </section>
+                    <section>
+                        <h4>Functional connectivity</h4>
+                        <div class='left'>
+                            <p align='left'>Neurophysiological activity relatively synchronized in distinct brain regions<br><span class='authors'>(Friston, 2011)</span></p>
+                        </div>
+                        <div class='right'>
+                            <figure>
+                                <img src="nist/imgs/conn.jpg" alt="conn">
+                                <figcaption class='authors right'>de Van Dijk et al., 2010
+                            </figure>
+                        </div>
+                    </section>
+                    <section>
+                        <p>These connectivity data can be studied as networks composed of brain regions connected by functional associations; they share characteristics with other biological networks and systems, and, because of this, they can be categorized using <font color='blue'>methods of complex networks.</font></p>
+                    </section>
+                    <section>
+                        <h3>Network Science</h3>
+                        <p>Interdisciplinary effort to characterize the properties of complex systems by the quantification of the topologies of their respective network representations.<br><span class='authors'>(Rubinov &amp; Sporns, 2010)</span></p>
+                        <p class='fragment'>These analysis can reliably quantificate brain networks with a small number of metrics easily computable and neurobiologically significative.<br><span class='authors'>Bullmore, 2007; Humphries &amp; Gurney, 2008; Latora &amp; Marchiori, 2001)</span></p>
+                    </section>
+                    <section data-background="nist/imgs/graphs.png" data-background-size='contain' data-background-position='left'>
+                        <p class='authors bottom right'>de Fornito, Bullmore y Zalesky, 2017</p>
+                    </section>
+                    <section data-background="nist/imgs/smallW.png" data-background-size='65%' data-background-position='20% 5%'>
+                        <p class='authors bottom right'>de Farahani, Karwowski y Lighthall, 2019</p>
+                    </section>
+                    <section>
+                        <h4>Wang et al., 2015</h4>
+                        <img src="nist/imgs/Wang1.png" alt="wang1">
+                    </section>
+                    <section>
+                        <figure>
+                            <img src="nist/imgs/Wang2.png" alt="wang2">
+                            <figcaption class='authors right'>de Wang et al, 2015
+                        </figure>
+                    </section>
+                </section>
+                <section>
+                    <p>Are there <font color='blue'>clinical</font> and <font color='blue'>network topology</font> changes in cocaine-addicted patients after a treatment with repetitive transcranial magnetic stimulation?</p>
+                </section>
+                <section>
+                    <section>
+                        <p>This was a mono-centric, double-blinded, placebo controlled randomized clinical study with parallel groups, carried out completely in the <font color="blue">National Institute of Psychiatry "Ram&oacute;n de la Fuente Mu&ntilde;iz"</font> in Mexico City. </p>
+                        <p style='font-size:75%'>This study was part of a major project financed by CONACYT (<font color="blue">S0008-2015-2-2610971</font>, and approved by the Ethics committe of the Institute (<font color='blue'>CEI/C/070/2016</font>).</p>
+                    </section>
+                    <section>
+                        <h3>Sample</h3>
+                        <p>We recruited treatment-seeking cocaine-addicted voluntaries from both the addiction clinic at the Institute and other clinics and institutes around Mexico City that met the DSM-5 criteria for cocaine-dependence.</p>
+                        <p>A subsample of matched healthy controls was taken from the database of a previous project of the Institute <span class='authors'>(Garza-Villarreal et al., 2017)</span>.</p>
+                    </section>
+                    <section>
+                        <h3>rTMS</h3>
+                        <div class='left'>
+                            <img src="nist/imgs/depressionCircuit.png" alt="circuit">
+                        </div>
+                        <div class='right'>
+                            <ul style='font-size:65%; margin-top:-30px'>
+                                <li>Magpro R-30 MagVenture;<br>MCF-P-B70 coil (8-shaped)</li>
+                                <li>DLPFC: 5cm anterior; 2cm lateral to M1</li>
+                                <li>Two 5 Hz sessions;<br>30 min interval</li>
+                                <li>50 10s trains;<br>1 min inter-tren interval; 100% MT</li>
+                                <li>5000 pulses:<br>2500 pulses, 58 min/session</li>
+                                <li>Double-blinded Sham;<br>frontal muscle electrode </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Clinical measures</h3>
+                       <div class='left'>
+                            <h4><i>Craving</i></h4>
+                            <ul style='font-size:65%; margin-top:-30px'>
+                                <li>CCQ-G</li>
+                                <li>CCQ-N</li>
+                                <li>VAS</li>
+                            </ul>
+                        </div>
+                        <div class='right'>
+                            <h4>Impulsivity</h4>
+                            <ul style='font-size:65%; margin-top:-30px'>
+                                <li>BIS-11</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>MRI</h3>
+                        <p>Philips Ingenia 3T Scanner with a 32-channel head coil</p>
+                        <div class='left'>
+                            <p style='font-size:70%; margin-top:-25px'>T2* EPI Sequence</p>
+                            <ul style='font-size:55%; margin-top:-30px'>
+                                <li>TR = 2s</li>
+                                <li>TE = 30ms</li>
+                                <li>Inclination angle: 75°</li>
+                                <li>37 slices of 3.33mm</li>
+                                <li>FOV = 240mm</li>
+                                <li>Matrix: 80x80</li>
+                                <li>Voxel: 3x3x3.33mm</li>
+                            </ul>
+                        </div>
+                        <div class='right'>
+                            <p style='font-size:70%; margin-top:-15px'>Secuencia 3D T1w</p>
+                            <ul style='font-size:55%; margin-top:-20px'>
+                                <li>TR = 7ms</li>
+                                <li>TE = 3.5ms</li>
+                                <li>Inclination angle: 8°</li>
+                                <li>180 slices of 1mm</li>
+                                <li>FOV = 240mm</li>
+                                <li>Matrix: 240x240</li>
+                                <li>Voxel: 1x1x1mm</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Imaging Pre-processing</h3>
+                    </section>
+                    <section>
+                        <h4>FMRIprep</h4>
+                        <p>Open-source fMRI minimal preprocessing pipeline <span class='small'>(Esteban et al., 2018)</p>
+                    </section>
+                    <section>
+                        <h4>XCP imaging pipeline</h4>
+                        <p>Open-source software package for modular processing of multimodal neuroimages</p>
+                    </section>
+                    <section>
+                        <h4>Pipeline: Power, 2014</h4> <div class='left'>
+                            <ul style='font-size:90%; margin-top:-30px'>
+                                <li>Distortion correction</li>
+                                <li>Motion realignment</li>
+                                <li>Brain extraction</li>
+                                <li>Demeaning &amp; Detrending</li>
+                                <li>Corregistration</li>
+                                <li>6 realignment parameters</li>
+                            </ul>
+                        </div>
+                        <div class='right'>
+                            <ul style='font-size:90%; margin-top:-30px'>
+                                <li>Mean WM/CSF signal</li>
+                                <li>Mean global signal</li>
+                                <li>Derivatives &amp; Quadratics (6RP)</li>
+                                <li>Expansion (WM/CSF/GS)</li>
+                                <li>Bandpass (0.01-0.08 Hz)</li>
+                                <li>Hard scrubbing</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <h3>Network construction</h3>
+                        <div class='right'>
+                            <figure>
+                                <img src="nist/imgs/power.png" alt="power">
+                                <figcaption class='authors'>de Power et al., 2011
+                            </figure>
+                        </div>
+                        <div class='left'>
+                            <p>Undirected weighted networks were constructed from the correlation (Pearson's $r$) of the BOLD signal from each of the 264 nodes of the Power atlas.</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h4>Topology metrics</h4>
+                        <ul style='font-size:90%; margin-top:-30px'>
+                            <li>Degree</li>
+                            <li>Density</li>
+                            <li>Clustering coefficient</li>
+                            <li>Characteristic Path Length</li>
+                            <li>Local efficiency</li>
+                            <li>Global efficiency</li>
+                            <li>Small-worldness</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Patients v Controls</h1>
+                    </section>
+                    <section>
+                        <table style='position:relative; font-size:80%' cellpadding=10 cellspacing=5><tr>
+                                <th>Group</th><th>Addicts<br/>(N=51)</th><th>Controls<br/>(N=45)</th><th>p</th></tr>
+                            <tr><td>Sex            </td><td></td><td></td><td>0.792</td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; M          </td><td>44 (86.3%)</td><td>37 (82.2%)</td><td></td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; F          </td><td>7 (13.7%)</td><td>8 (17.8%)</td><td></td></tr>
+                            <tr><td>Age            </td><td>34.8 ±  7.6</td><td>30.5 ±  7.5</td><td>0.007</td></tr>
+                            <tr><td>Education      </td><td>13.1 ±  2.9</td><td>12.8 ±  3.5</td><td>0.679</td></tr>
+                            <tr><td>Smoking        </td><td></td><td></td><td>0.006</td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; No         </td><td>13 (26.5%)</td><td>25 (56.8%)</td><td></td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; Yes        </td><td>36 (73.5%)</td><td>19 (43.2%)</td><td></td></tr>
+                            <tr><td>Cigarrettes_day</td><td> 6.2 ± 10.1</td><td> 0.5 ±  0.8</td><td>0.000</td></tr>
+                        </table>
+                    </section>
+                    <section>
+                        <img src="nist/imgs/pvc1.png" alt="fig1">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/pvc2.png" alt="fig2">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/pvc3.png" alt="fig3">
+                    </section>
+                    <section>
+                        <table style="text-align:center; position:relative; font-size:45%">
+                            <tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="5">Dependent Variables</td></tr>
+                            <tr><td></td><td colspan="5" style="border-bottom: 1px solid black"></td></tr>
+                            <tr><td style="text-align:left"></td><td>Density</td><td>Strength</td><td>Global Efficiency</td><td>Local Efficiency</td><td>Small worldness</td></tr>
+                            <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td><td>(5)</td></tr>
+                            <tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Group(HC)</td><td>-0.007<sup>***</sup></td><td>-0.626<sup>***</sup></td><td>-0.051<sup>***</sup></td><td>-0.126<sup>***</sup></td><td>17.766<sup>***</sup></td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.0002)</td><td>(0.036)</td><td>(0.002)</td><td>(0.005)</td><td>(1.094)</td></tr>
+                            <tr><td style="text-align:left">Sex(F)</td><td>-0.0004<sup>*</sup></td><td>-0.113<sup>**</sup></td><td>-0.001</td><td>-0.009</td><td>-0.485</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.0002)</td><td>(0.049)</td><td>(0.002)</td><td>(0.006)</td><td>(1.479)</td></tr>
+                            <tr><td style="text-align:left">Age</td><td>-0.00000</td><td>-0.003</td><td>-0.0001</td><td>-0.0001</td><td>0.091</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.00001)</td><td>(0.002)</td><td>(0.0001)</td><td>(0.0003)</td><td>(0.071)</td></tr>
+                            <tr><td style="text-align:left">Education</td><td>0.0001<sup>**</sup></td><td>0.010<sup>*</sup></td><td>0.0003</td><td>0.001<sup>*</sup></td><td>-0.300<sup>*</sup></td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.00003)</td><td>(0.005)</td><td>(0.0002)</td><td>(0.001)</td><td>(0.166)</td></tr>
+                            <tr><td style="text-align:left">Constant</td><td>0.011<sup>***</sup></td><td>1.009<sup>***</sup></td><td>0.063<sup>***</sup></td><td>0.234<sup>***</sup></td><td>3.914</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.0005)</td><td>(0.100)</td><td>(0.004)</td><td>(0.013)</td><td>(3.039)</td></tr>
+                            <tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>91</td><td>91</td><td>91</td><td>91</td><td>91</td></tr>
+                            <tr><td style="text-align:left">R<sup>2</sup></td><td>0.953</td><td>0.794</td><td>0.927</td><td>0.898</td><td>0.764</td></tr>
+                            <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.950</td><td>0.784</td><td>0.924</td><td>0.893</td><td>0.753</td></tr>
+                            <tr><td style="text-align:left">Residual Std. Error (df = 86)</td><td>0.001</td><td>0.166</td><td>0.007</td><td>0.022</td><td>5.033</td></tr>
+                            <tr><td style="text-align:left">F Statistic (df = 4; 86)</td><td>432.703<sup>***</sup></td><td>82.777<sup>***</sup></td><td>273.509<sup>***</sup></td><td>188.366<sup>***</sup></td><td>69.479<sup>***</sup></td></tr>
+                            <tr><td colspan="6" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="5" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+                        </table>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Randomized Clinical Trial</h1>
+                    </section>
+                    <section>
+                        <table style='position:relative; font-size:50%' cellpadding=5 cellspacing=5>
+                            <tr>
+                                <th>Stage</th><th colspan="3">T0</th><th colspan="3">T1</th></tr>
+                            <tr>
+                                <th>Group</th><th>Sham<br/>(N=20)</th><th>Real<br/>(N=24)</th><th>p</th><th>Sham<br/>(N=20)</th><th>Real<br/>(N=24)</th><th>p</th></tr>
+                            <tr><td>Sex              </td><td></td><td></td><td>0.841</td><td></td><td></td><td>0.841</td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; M            </td><td>18 (90.00%)</td><td>20 (83.33%)</td><td></td><td>18 (90.00%)</td><td>20 (83.33%)</td><td></td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; F            </td><td>2 (10.00%)</td><td>4 (16.67%)</td><td></td><td>2 (10.00%)</td><td>4 (16.67%)</td><td></td></tr>
+                            <tr><td>Age              </td><td>33.30 ± 8.66</td><td>35.79 ± 7.05</td><td>0.299</td><td>33.30 ± 8.66</td><td>35.79 ± 7.05</td><td>0.299</td></tr>
+                            <tr><td>Education        </td><td>12.93 ± 2.71</td><td>13.17 ± 3.00</td><td>0.787</td><td>12.93 ± 2.71</td><td>13.17 ± 3.00</td><td>0.787</td></tr>
+                            <tr><td>Consumption_years</td><td>10.07 ± 7.85</td><td>11.29 ± 7.85</td><td>0.612</td><td>10.07 ± 7.85</td><td>11.29 ± 7.85</td><td>0.612</td></tr>
+                            <tr><td>Tobacco          </td><td></td><td></td><td>0.666</td><td></td><td></td><td>0.666</td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; No           </td><td>4 (20.00%)</td><td>7 (30.43%)</td><td></td><td>4 (20.00%)</td><td>7 (30.43%)</td><td></td></tr>
+                            <tr><td> &nbsp;&nbsp;&nbsp; Yes          </td><td>16 (80.00%)</td><td>16 (69.57%)</td><td></td><td>16 (80.00%)</td><td>16 (69.57%)</td><td></td></tr>
+                            <tr><td>Cigarrettes_day  </td><td>4.28 ± 4.17</td><td>8.33 ± 13.65</td><td>0.188</td><td>4.28 ± 4.17</td><td>8.33 ± 13.65</td><td>0.188</td></tr>
+                            <tr><td>VAS              </td><td>2.55 ± 2.85</td><td>3.94 ± 3.59</td><td>0.167</td><td>2.31 ± 2.46</td><td>1.48 ± 2.40</td><td>0.260</td></tr>
+                            <tr><td>CCQG             </td><td>192.45 ± 47.88</td><td>187.25 ± 47.76</td><td>0.721</td><td>152.40 ± 54.64</td><td>144.58 ± 47.78</td><td>0.615</td></tr>
+                            <tr><td>CCQN            </td><td>141.25 ± 49.40</td><td>148.54 ± 46.53</td><td>0.617</td><td>129.15 ± 46.23</td><td>115.21 ± 45.58</td><td>0.321</td></tr>
+                            <tr><td>BIS11            </td><td>60.75 ± 17.01</td><td>64.83 ± 17.22</td><td>0.441</td><td>59.80 ± 21.45</td><td>53.12 ± 17.40</td><td>0.261</td></tr>
+                        </table>
+                    </section>
+                    <section>
+                        <img src="nist/imgs/tms1.png" alt="fig4">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/tms2.png" alt="fig5">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/tms3.png" alt="fig6">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/tms4.png" alt="fig7">
+                    </section>
+                    <section>
+                        <table style="text-align:center; position:relative; font-size:35%">
+                            <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="4">Clinical measures (Post-treatment)</td></tr>
+                            <tr><td></td><td colspan="4" style="border-bottom: 1px solid black"></td></tr>
+                            <tr><td style="text-align:left"></td><td>VAS</td><td>CCQ-G</td><td>CCQ-N</td><td>BIS-11</td></tr>
+                            <tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td></tr>
+                            <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Group(Real)</td><td>-1.423<sup>**</sup></td><td>-4.275</td><td>-16.931</td><td>-8.526<sup>*</sup></td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.658)</td><td>(13.500)</td><td>(12.253)</td><td>(4.545)</td></tr>
+                            <tr><td style="text-align:left">VAS</td><td>0.377<sup>***</sup></td><td></td><td></td><td>-0.334</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.099)</td><td></td><td></td><td>(0.935)</td></tr>
+                            <tr><td style="text-align:left">CCQ-G</td><td></td><td>0.664<sup>***</sup></td><td></td><td>0.042</td></tr>
+                            <tr><td style="text-align:left"></td><td></td><td>(0.158)</td><td></td><td>(0.069)</td></tr>
+                            <tr><td style="text-align:left">CCQ-N</td><td></td><td></td><td>0.531<sup>***</sup></td><td>-0.078</td></tr>
+                            <tr><td style="text-align:left"></td><td></td><td></td><td>(0.136)</td><td>(0.081)</td></tr>
+                            <tr><td style="text-align:left">B11</td><td>0.021</td><td>0.492</td><td>0.275</td><td>0.945<sup>***</sup></td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.021)</td><td>(0.432)</td><td>(0.411)</td><td>(0.149)</td></tr>
+                            <tr><td style="text-align:left">sexF</td><td>-0.617</td><td>-0.135</td><td>-10.291</td><td>-0.370</td></tr>
+                            <tr><td style="text-align:left"></td><td>(1.001)</td><td>(25.473)</td><td>(22.924)</td><td>(8.383)</td></tr>
+                            <tr><td style="text-align:left">age</td><td>0.024</td><td>0.702</td><td>0.104</td><td>-0.510</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.044)</td><td>(1.507)</td><td>(1.392)</td><td>(0.497)</td></tr>
+                            <tr><td style="text-align:left">education</td><td>-0.161</td><td>-4.940<sup>*</sup></td><td>-2.407</td><td>0.584</td></tr>
+                            <tr><td style="text-align:left"></td><td>(0.127)</td><td>(2.896)</td><td>(2.476)</td><td>(0.944)</td></tr>
+                            <tr><td style="text-align:left">coc_years</td><td></td><td>-0.367</td><td>0.517</td><td>0.146</td></tr>
+                            <tr><td style="text-align:left"></td><td></td><td>(1.540)</td><td>(1.427)</td><td>(0.513)</td></tr>
+                            <tr><td style="text-align:left">smoking</td><td></td><td>13.490</td><td>14.102</td><td>0.927</td></tr>
+                            <tr><td style="text-align:left"></td><td></td><td>(16.329)</td><td>(14.688)</td><td>(5.683)</td></tr>
+                            <tr><td style="text-align:left">Constant</td><td>1.413</td><td>28.132</td><td>49.721</td><td>13.556</td></tr>
+                            <tr><td style="text-align:left"></td><td>(2.473)</td><td>(58.678)</td><td>(52.124)</td><td>(19.075)</td></tr>
+                            <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>43</td><td>43</td><td>43</td><td>43</td></tr>
+                            <tr><td style="text-align:left">R<sup>2</sup></td><td>0.387</td><td>0.422</td><td>0.430</td><td>0.620</td></tr>
+                            <tr><td style="text-align:left">Adjusted R<sup>2</sup></td><td>0.284</td><td>0.286</td><td>0.296</td><td>0.502</td></tr>
+                            <tr><td style="text-align:left">Residual Std. Error</td><td>2.069 (df = 36)</td><td>42.835 (df = 34)</td><td>38.846 (df = 34)</td><td>13.861 (df = 32)</td></tr>
+                            <tr><td style="text-align:left">F Statistic</td><td>3.781<sup>***</sup> (df = 6; 36)</td><td>3.107<sup>***</sup> (df = 8; 34)</td><td>3.205<sup>***</sup> (df = 8; 34)</td><td>5.228<sup>***</sup> (df = 10; 32)</td></tr>
+                            <tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="4" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+                        </table>
+                    </section>
+                    <section>
+                        <img src="nist/imgs/graph1.png" alt="fig8">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/graph2.png" alt="fig9">
+                    </section>
+                    <section>
+                        <img src="nist/imgs/graph3.png" alt="fig10">
+                    </section>
+                    <section>
+<table style="text-align:center; position:relative; font-size:35%">
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="4">Dependent Variables</td></tr>
+<tr><td></td><td colspan="4" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td>Density</td><td>Strength</td><td>Local Efficiency</td><td>Global Efficiency</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td><td>(4)</td></tr>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Stage(Post-)</td><td>0.0003</td><td>0.049</td><td>-0.023<sup>***</sup></td><td>-0.002</td></tr>
+<tr><td style="text-align:left"></td><td>(0.0002)</td><td>(0.051)</td><td>(0.005)</td><td>(0.002)</td></tr>
+<tr><td style="text-align:left">Group(Real)</td><td>0.004<sup>***</sup></td><td>0.373<sup>***</sup></td><td>0.036<sup>***</sup></td><td>0.034<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.0004)</td><td>(0.094)</td><td>(0.009)</td><td>(0.004)</td></tr>
+<tr><td style="text-align:left">VAS</td><td>-0.00004</td><td>-0.005</td><td>-0.001</td><td>-0.0003</td></tr>
+<tr><td style="text-align:left"></td><td>(0.00005)</td><td>(0.010)</td><td>(0.001)</td><td>(0.0005)</td></tr>
+<tr><td style="text-align:left">B11</td><td>-0.00001</td><td>0.0005</td><td>0.00003</td><td>-0.0001</td></tr>
+<tr><td style="text-align:left"></td><td>(0.00001)</td><td>(0.002)</td><td>(0.0002)</td><td>(0.0001)</td></tr>
+<tr><td style="text-align:left">Sex(F)</td><td>0.0001</td><td>-0.081</td><td>-0.0004</td><td>-0.002</td></tr>
+<tr><td style="text-align:left"></td><td>(0.001)</td><td>(0.130)</td><td>(0.013)</td><td>(0.005)</td></tr>
+<tr><td style="text-align:left">Age</td><td>-0.00003</td><td>-0.005</td><td>-0.0001</td><td>-0.0001</td></tr>
+<tr><td style="text-align:left"></td><td>(0.00003)</td><td>(0.006)</td><td>(0.001)</td><td>(0.0002)</td></tr>
+<tr><td style="text-align:left">Education</td><td>0.0001</td><td>0.017</td><td>0.001</td><td>0.001</td></tr>
+<tr><td style="text-align:left"></td><td>(0.0001)</td><td>(0.016)</td><td>(0.002)</td><td>(0.001)</td></tr>
+<tr><td style="text-align:left">Stage:Group</td><td>-0.004<sup>***</sup></td><td>-0.347<sup>***</sup></td><td>-0.002</td><td>-0.042<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.0003)</td><td>(0.075)</td><td>(0.008)</td><td>(0.003)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>0.014<sup>***</sup></td><td>1.149<sup>***</sup></td><td>0.280<sup>***</sup></td><td>0.115<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.001)</td><td>(0.289)</td><td>(0.029)</td><td>(0.012)</td></tr>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>80</td><td>80</td><td>80</td><td>80</td></tr>
+<tr><td style="text-align:left">Log Likelihood</td><td>363.103</td><td>-20.479</td><td>141.294</td><td>201.006</td></tr>
+<tr><td style="text-align:left">Akaike Inf. Crit.</td><td>-704.206</td><td>62.957</td><td>-260.588</td><td>-380.011</td></tr>
+<tr><td style="text-align:left">Bayesian Inf. Crit.</td><td>-678.003</td><td>89.159</td><td>-234.386</td><td>-353.809</td></tr>
+<tr><td colspan="5" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="4" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+                    </section>
+                    <section>
+<table style="text-align:center; position:relative; font-size:35%">
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"></td><td colspan="3">Dependent Variables</td></tr>
+<tr><td></td><td colspan="3" style="border-bottom: 1px solid black"></td></tr>
+<tr><td style="text-align:left"></td><td>Path Length</td><td>Clustering Coefficient</td><td>Small World</td></tr>
+<tr><td style="text-align:left"></td><td>(1)</td><td>(2)</td><td>(3)</td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Stage(Post-)</td><td>0.079</td><td>-0.010<sup>*</sup></td><td>-1.134<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.131)</td><td>(0.006)</td><td>(0.144)</td></tr>
+<tr><td style="text-align:left">Group(Real)</td><td>-0.816<sup>***</sup></td><td>0.020<sup>**</sup></td><td>-1.075<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.151)</td><td>(0.008)</td><td>(0.140)</td></tr>
+<tr><td style="text-align:left">VAS</td><td>-0.022</td><td>-0.001</td><td>0.008</td></tr>
+<tr><td style="text-align:left"></td><td>(0.019)</td><td>(0.001)</td><td>(0.017)</td></tr>
+<tr><td style="text-align:left">B11</td><td>0.003</td><td>0.0001</td><td>-0.002</td></tr>
+<tr><td style="text-align:left"></td><td>(0.003)</td><td>(0.0002)</td><td>(0.003)</td></tr>
+<tr><td style="text-align:left">Sex(F)</td><td>-0.145</td><td>0.004</td><td>-0.063</td></tr>
+<tr><td style="text-align:left"></td><td>(0.181)</td><td>(0.011)</td><td>(0.149)</td></tr>
+<tr><td style="text-align:left">Age</td><td>0.011</td><td>-0.0002</td><td>0.014<sup>**</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.008)</td><td>(0.0005)</td><td>(0.007)</td></tr>
+<tr><td style="text-align:left">Education</td><td>-0.031</td><td>0.001</td><td>0.003</td></tr>
+<tr><td style="text-align:left"></td><td>(0.023)</td><td>(0.001)</td><td>(0.019)</td></tr>
+<tr><td style="text-align:left">Stage:Group</td><td>0.935<sup>***</sup></td><td>0.012</td><td>1.804<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.185)</td><td>(0.009)</td><td>(0.200)</td></tr>
+<tr><td style="text-align:left">Constant</td><td>6.305<sup>***</sup></td><td>0.359<sup>***</sup></td><td>4.363<sup>***</sup></td></tr>
+<tr><td style="text-align:left"></td><td>(0.442)</td><td>(0.025)</td><td>(0.375)</td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left">Observations</td><td>80</td><td>80</td><td>80</td></tr>
+<tr><td style="text-align:left">Log Likelihood</td><td>-66.821</td><td>143.514</td><td>-63.808</td></tr>
+<tr><td style="text-align:left">Akaike Inf. Crit.</td><td>155.643</td><td>-265.029</td><td>149.617</td></tr>
+<tr><td style="text-align:left">Bayesian Inf. Crit.</td><td>181.845</td><td>-238.827</td><td>175.819</td></tr>
+<tr><td colspan="4" style="border-bottom: 1px solid black"></td></tr><tr><td style="text-align:left"><em>Note:</em></td><td colspan="3" style="text-align:right"><sup>*</sup>p<0.1; <sup>**</sup>p<0.05; <sup>***</sup>p<0.01</td></tr>
+</table>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h1>Conclusions</h1>
+                    </section>
+                    <section>
+                        <p>This is the first double-blind study with a sample of more than 40 participants and neuroimaging measures of the effects of rTMS in cocaine addiction. </p>
+                        <p>Our results defend the usability of rTMS over the left DLPFC as a feasible alternative in the treatment of cocaine dependence, specially in those patients in which conventional treatment is not sufficient</p>
+                    </section>
+                    <section>
+                        <p>This work lays the groundwork to continue the exploration of rTMS as an addiction treatment, and the usage of network science methods in the study of the neurobiological bases of addiction, its development and evolution.</p>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <script src="js/reveal.js"></script>
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+                mouseWheel: true,
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+                pdfSeparateFragments : false,
+                margin: 0.1,
+                chart: {
+                   defaults: {
+                        global: {
+                            title: { fontColor: "#000" },
+                            legend: {
+                                position: "bottom",
+                                labels: { fontColor: "#000" },
+                            },
+                            tooltips: {
+                                labels: { fontColor: "#000" },
+                            },
+                        },
+                        scale: {
+                            scaleLabel: { fontColor: "#000" },
+                            gridLines: { color: "#000", zeroLineColor: "#000" },
+                            ticks: { fontColor: "#000" },
+                        }
+                    },
+                    line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [5,10] ] },
+                    bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+                    pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+                    radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]},
+                },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true },
+                    { src: 'plugin/search/search.js', async: true },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/reveal.js-plugins/chart/Chart.min.js'},
+                    { src: 'plugin/reveal.js-plugins/chart/csv2chart.js'},
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'https://d3js.org/d3.v4.min.js'},
+                    { src: 'plugin/d3js.js'}
+                ]
+            });
+        </script>
+    </body>
+</html>
+
