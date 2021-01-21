@@ -41,8 +41,10 @@
   },
   "license": "MIT",
   "dependencies": {
+    "-": "0.0.1",
     "bower": "^1.8.8",
     "node-sass": "^4.13.1",
+    "npm": "^6.14.11",
     "reveal.js-d3js": "^1.0.0"
   }
 }
